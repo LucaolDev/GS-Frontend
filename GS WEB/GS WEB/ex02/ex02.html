@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matheus e Lucas</title>
+
+    <!-- Link CSS BS - NÃO APAGAR -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h4 class="text-center bg-primary text-light m-0 py-4">
+            Lista de Painéis Solares
+        </h4>
+
+        <div class="row mt-2 mb-5" id="paineis">
+            
+        </div>
+
+        <div class="row my-5 border rounded">
+            <div class="col-md-6 text-center my-3 rounded p-2">
+                <h5>Total de paineis encontrados</h5>
+                <h4 id="totalPaineis"></h4>
+            </div>
+            <div class="col-md-6 text-center my-3 rounded p-2">
+                <h5>Painel mais caro</h5>
+                <h4 id="maiorValor"></h4>
+            </div>
+           
+        </div>
+    </div>
+    <script src="./js/paineis.js"></script>
+    <script src="./js/formatarMoeda.js"></script>
+    <script src="./js/montarCards.js"></script>
+</body>
+
+</html>

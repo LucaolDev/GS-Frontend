@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matheus e Lucas</title>
+
+    <!-- Link CSS BS - NÃO APAGAR -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h4 class="display-5 p-4 bg-primary text-light">
+            Paineis Solares
+        </h4>
+
+        <h2 class="mt-4">Dados para o cálculo</h2>
+        <form class="dados" id="dados" method="get" action="">
+            <div class="row mb-3">
+
+                <div class="col-md-6 my-3">
+                    <label for="consumo" class="form-label">Consumo Mensal</label>
+                    <input type="text" class="form-control" id="consumo" name="consumo" placeholder="ex: 500" required>
+                </div>
+
+                <div class="col-md-6  my-3">
+                    <label for="potenciaPainel" class="form-label">Potência dos Painéis</label>
+                    <input type="text" class="form-control" id="potenciaPainel" name="potenciaPainel"
+                        placeholder="ex: 0.4" required>
+                </div>
+
+                <div class="col-md-6  my-3">
+                    <label for="irradiacaoSolar" class="form-label">Irradiação Solar</label>
+                    <input type="text" class="form-control" id="irradiacaoSolar" name="irradiacaoSolar"
+                        placeholder="ex: 4" required>
+                </div>
+                <div class="col-md-6  my-3">
+                    <label for="eficieneciaSistema" class="form-label">Eficiência do Sistema</label>
+                    <input type="text" class="form-control" id="eficienciaSistema" name="eficieneciaSistema"
+                        placeholder="ex: 0.8" required>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-3">
+                <button type="submit" class="btn btn-primary">Gerar Tabela >></button>
+            </div>
+        </form>
+
+        <div class="my-4">
+            <h2>Cotações realizadas</h2>
+            <table id="resumo" class="table table-hover text-center">
+                <thead class="table-dark">
+                    <tr id="cabecalho">
+                        <th class="nome">Consumo Mensal</th>
+                        <th class="tipo-Plano">Potência Painéis</th>
+                        <th class="valor-Plano">Irradiação Solar</th>
+                        <th class="dependentes">Eficiência Sistema</th>
+                        <th class="totalMensal">Número Painéis Necessários</th>
+                    </tr>
+                </thead>
+                <tbody id="paineis"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
